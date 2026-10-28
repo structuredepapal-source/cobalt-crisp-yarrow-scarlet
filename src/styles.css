@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14120e;
+  --color-ink-soft: #2c2822;
+  --color-gold: #e6b325;
+  --color-paper: #f3efe6;
+  --color-foam: #f7f3ea;
+  --color-mist: #8f8678;
+  --color-line: #d9d2c4;
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    background: var(--color-ink);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-foam);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+.kicker {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 460;
+  font-size: clamp(3.25rem, 12vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+}
+
+.topbar {
+  padding-top: max(0.85rem, env(safe-area-inset-top));
+  background: linear-gradient(to bottom, rgb(20 18 14 / 0.78), rgb(20 18 14 / 0));
+}
+
+.plate {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--color-ink);
+}
+
+.plate-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hem {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  height: 1.25rem;
+  background: var(--color-ink);
+  box-shadow: 0 1px 0 var(--color-gold);
+}
+
+.scrim {
+  background: linear-gradient(
+    to top,
+    rgb(20 18 14 / 0.82) 0%,
+    rgb(20 18 14 / 0.35) 42%,
+    transparent 72%
+  );
+}
+
+.rule {
+  height: 1px;
+  width: min(100%, 28rem);
+  transform-origin: left;
+  background: var(--color-gold);
+  animation: draw 1.3s cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .plate-img {
+      animation: settle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 46%;
+    }
+  }
+}
+
+@keyframes settle {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rule,
+  .plate-img {
+    animation: none;
+  }
+}
+
+.tap {
+  transition: scale 150ms ease-out;
+}
+
+.tap:active {
+  scale: 0.96;
+}
+
+.studio {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}

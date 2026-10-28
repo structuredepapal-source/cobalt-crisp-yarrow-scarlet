@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "HA+ARCHITECTS · Quetta",
+      "hasCanvas": false,
+      "bodyTextLen": 1041,
+      "bodyTextHash": "e5d0c53b59cd63ed699f505600a2e4281899d591f81e00345255d814aa779b93",
+      "bodyTextPrefix": "INQUIRE INDEX Houses, commercial buildings, interiors, and place",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "HA+ARCHITECTS · Quetta",
+      "hasCanvas": false,
+      "bodyTextLen": 1041,
+      "bodyTextHash": "e5d0c53b59cd63ed699f505600a2e4281899d591f81e00345255d814aa779b93",
+      "bodyTextPrefix": "INQUIRE INDEX Houses, commercial buildings, interiors, and place",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)",
+    "mobile: body text replaced (similar length, page start changed)"
+  ]
+}

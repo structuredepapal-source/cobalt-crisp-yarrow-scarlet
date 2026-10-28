@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "HA+ARCHITECTS · Quetta",
+      "hasCanvas": false,
+      "bodyTextLen": 1055,
+      "bodyTextHash": "0af983b256451c37136a083a4d9bc381dcff2e8ddf888093abbb02d82fe9dc27",
+      "bodyTextPrefix": "HA+ARCHITECTS INQUIRE INDEX Houses, commercial buildings, interi",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "HA+ARCHITECTS · Quetta",
+      "hasCanvas": false,
+      "bodyTextLen": 1033,
+      "bodyTextHash": "d2012e641426e1e11f9d1b8252bbf7b3a134bc9b40d2d3ab3491e5403666a896",
+      "bodyTextPrefix": "INDEX Houses, commercial buildings, interiors, and places of wor",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
